@@ -37,6 +37,10 @@ extension Date {
         return Calendar.current.date(byAdding: DateComponents(month: -months, day: 0), to: self)!
     }
     
+    func yearsBack(years: Int) -> Date {
+        return Calendar.current.date(byAdding: DateComponents(year: -years), to: self)!
+    }
+    
     func startOfYear() -> Date {
         return Calendar.current.date(from: Calendar.current.dateComponents([.year], from: Calendar.current.startOfDay(for: self)))!
     }
